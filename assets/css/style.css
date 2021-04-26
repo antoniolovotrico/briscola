@@ -22,11 +22,6 @@ p {
   top: 0;
   background-color: black;
 }
-/* .total {
-  position: sticky;
-  bottom: 0;
-  background-color: black;
-} */
 header {
   border-bottom: 1px solid white;
   display: flex;
@@ -59,13 +54,13 @@ nav {
 
 main {
   display: flex;
-  max-height: 67vh;
+  max-height: 67.5vh;
   overflow-y: scroll;
 }
 #round,
 #call {
   height: 100%;
-  min-height: 67vh;
+  min-height: 67.5vh;
   width: 5%;
   display: flex;
   flex-direction: column;
@@ -76,10 +71,10 @@ main {
   border-left: 1px solid white;
   width: 10%;
 }
+
 #call_action {
   height: 10vh;
-  border-left: 1px solid white;
-  width: 10%;
+  width: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,17 +90,11 @@ main {
   flex-direction: column;
   align-items: center;
   text-transform: uppercase;
-  padding: 10px 0;
+  font-weight: bold;
+  padding: 5px 0;
 }
 .player {
-  min-height: 67vh;
-}
-#tot_round {
-  width: 5%;
-  height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-height: 67.5vh;
   padding: 10px 0;
 }
 
@@ -203,16 +192,16 @@ footer {
 
 .role {
   background-image: linear-gradient(to right, beige, lightblue);
-  height: 50%;
+  height: 70%;
   min-width: 60px;
   border-radius: 5px;
-  margin-top: 10px;
+  margin-top: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #score_btn {
   background-image: linear-gradient(to right, beige, lightblue);
-  height: 90%;
+  height: 95%;
   min-width: 40%;
   border-radius: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
