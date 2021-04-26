@@ -99,6 +99,7 @@ if (data) {
       data.players[2].points.splice(data.players[2].points.length - 1, 1);
       data.players[3].points.splice(data.players[3].points.length - 1, 1);
       data.players[4].points.splice(data.players[4].points.length - 1, 1);
+      data.checked = false;
       localStorage.setItem("local", JSON.stringify(data));
       data = JSON.parse(localStorage.getItem("local"));
     });
