@@ -96,6 +96,7 @@ main {
 .player {
   min-height: 67.5vh;
   padding: 10px 0;
+  font-size: 1.2rem;
 }
 
 .modal_name_hide,
