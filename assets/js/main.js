@@ -60,7 +60,7 @@ const modalScore = document.querySelector(".modal_score_hide");
 const modalWin = document.querySelector(".modal_win_hide");
 let data = JSON.parse(localStorage.getItem("local"));
 const colPlay = document.getElementsByClassName("player");
-const totR = document.getElementById("totR");
+// const totR = document.getElementById("totR");
 const actionCol = document.getElementsByClassName("action");
 const scoreBtn = document.getElementById("score_btn");
 const check = document.getElementById("check");
@@ -236,7 +236,7 @@ if (data) {
       });
     });
   }
-  totR.innerHTML = data.round.length - 1;
+  //   totR.innerHTML = data.round.length - 1;
   score.addEventListener("click", function () {
     modalScore.classList.remove("modal_score_hide");
     modalScore.classList.add("modal_score_show");
@@ -267,7 +267,7 @@ if (data) {
         localStorage.setItem("local", JSON.stringify(data));
         data = JSON.parse(localStorage.getItem("local"));
         round.innerHTML += `<p>${data.round[data.round.length - 1]}</p>`;
-        totR.innerHTML = data.round.length - 1;
+        // totR.innerHTML = data.round.length - 1;
       }
     });
   });
@@ -858,12 +858,12 @@ else {
         localStorage.setItem("local", JSON.stringify(match));
         data = JSON.parse(localStorage.getItem("local"));
         round.innerHTML += `<p>${data.round[data.round.length - 1]}</p>`;
-        totR.innerHTML = data.round.length - 1;
+        // totR.innerHTML = data.round.length - 1;
       }
     });
   });
   //   score.innerHTML = match.score[match.score.length - 1];
-  totR.innerHTML = match.round.length - 1;
+  //   totR.innerHTML = match.round.length - 1;
   scoreBtn.addEventListener("click", function () {
     modalWin.classList.remove("modal_win_hide");
     modalWin.classList.add("modal_win_show");
