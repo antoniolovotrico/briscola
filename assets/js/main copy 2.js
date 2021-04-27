@@ -102,12 +102,19 @@ if (data) {
       data.players[3].points.splice(data.players[3].points.length - 1, 1);
       data.players[4].points.splice(data.players[4].points.length - 1, 1);
       for (const player of data.players) {
-        player.role = "";
+        if (player.ao == "turn") {
+          colPlay[player.id].innerHTML += `
+            <h6  id="${player.id}" class="name last your_turn">${player.name}</h6>`;
+        } else {
+          colPlay[player.id].innerHTML += `
+                <h6  id="${player.id}" class="name">${player.name}</h6>`;
+        }
       }
       data.checked = false;
       data.selected = false;
       localStorage.setItem("local", JSON.stringify(data));
       data = JSON.parse(localStorage.getItem("local"));
+      location.reload();
     });
     cashBtn.addEventListener("click", function () {
       modalMenu.classList.remove("modal_menu_show");
@@ -277,12 +284,14 @@ if (data) {
         // totR.innerHTML = data.round.length - 1;
       }
       for (const player of data.players) {
-        player.role = "";
+        if (player.ao == "turn") {
+          colPlay[player.id].innerHTML += `
+            <h6  id="${player.id}" class="name last your_turn">${player.name}</h6>`;
+        } else {
+          colPlay[player.id].innerHTML += `
+                <h6  id="${player.id}" class="name">${player.name}</h6>`;
+        }
       }
-      data.checked = false;
-      data.selected = false;
-      localStorage.setItem("local", JSON.stringify(data));
-      data = JSON.parse(localStorage.getItem("local"));
     });
   });
   scoreBtn.addEventListener("click", function () {
