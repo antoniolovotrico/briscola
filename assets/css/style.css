@@ -47,6 +47,7 @@ nav {
   min-width: 80px;
   border-radius: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
 }
 
 #menu_btn:focus {
@@ -148,6 +149,7 @@ form {
   min-width: 50px;
   border-radius: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
 }
 #name_btn,
 #choose_btn,
@@ -157,6 +159,7 @@ form {
   min-width: 50px;
   border-radius: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
 }
 #btn_call {
   background-image: linear-gradient(to right, beige, lightblue);
@@ -202,6 +205,7 @@ footer {
   border-radius: 5px;
   margin-top: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
 }
 
 #score_btn {
@@ -210,6 +214,7 @@ footer {
   min-width: 40%;
   border-radius: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
 }
 
 #check {
