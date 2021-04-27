@@ -194,7 +194,9 @@ if (data) {
       } else {
         roleChoose.classList.remove("called");
         roleChoose.innerHTML = "Role";
+        data.players[roleChoose.id].role = "";
         data.selected = false;
+        console.log(data);
       }
     });
   }
