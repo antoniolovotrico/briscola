@@ -1,5 +1,5 @@
 let match = {
-  cash: 0,
+  cash: 0.25,
   checked: false,
   selected: false,
   round: [0],

@@ -265,7 +265,7 @@ footer {
   font-weight: bolder;
 }
 .your_turn {
-  color: blue;
+  color: yellow;
 }
 
 #ok_menu,
@@ -286,4 +286,8 @@ footer {
   flex-direction: column;
   height: 60%;
   justify-content: space-evenly;
+}
+
+li {
+  text-transform: uppercase;
 }
