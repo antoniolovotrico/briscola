@@ -170,36 +170,39 @@ if (data) {
 
     actionCol[player.id].innerHTML += `
     <h3 class="total">${total}</h3>
-    <button id="${player.id}" class="role">Role</button>
+    <button id="${player.id}" onclick="chooseRole(this)" class="role">Role</button>
     `;
   }
   localStorage.setItem("local", JSON.stringify(data));
   data = JSON.parse(localStorage.getItem("local"));
   var roleAction = document.getElementsByClassName("role");
-  for (const roleChoose of roleAction) {
-    roleChoose.addEventListener("click", function () {
-      if (
-        !roleChoose.classList.contains("caller") &&
-        !roleChoose.classList.contains("called")
-      ) {
-        roleChoose.classList.add("caller");
-        roleChoose.innerHTML = "Caller";
-        data.players[roleChoose.id].role = "caller";
-        data.selected = true;
-      } else if (roleChoose.classList.contains("caller")) {
-        roleChoose.classList.remove("caller");
-        roleChoose.classList.add("called");
-        roleChoose.innerHTML = "Called";
-        data.players[roleChoose.id].role = "called";
-      } else {
-        roleChoose.classList.remove("called");
-        roleChoose.innerHTML = "Role";
-        data.players[roleChoose.id].role = "";
-        data.selected = false;
-        console.log(data);
-      }
-    });
+
+  function chooseRole(element) {
+    for (const roleChoose of roleAction) {
+      roleChoose.classList[roleChoose === element ? "add" : "remove"]("caller");
+      //   if (
+      //     !roleChoose.classList.contains("caller") &&
+      //     !roleChoose.classList.contains("called")
+      //   ) {
+      //     roleChoose.classList.add("caller");
+      //     roleChoose.innerHTML = "Caller";
+      //     data.players[roleChoose.id].role = "caller";
+      //     data.selected = true;
+      //     console.log(roleAction);
+      //   } else if (roleChoose.classList.contains("caller")) {
+      //     roleChoose.classList.remove("caller");
+      //     roleChoose.classList.add("called");
+      //     roleChoose.innerHTML = "Called";
+      //     data.players[roleChoose.id].role = "called";
+      //   } else {
+      //     roleChoose.classList.remove("called");
+      //     roleChoose.innerHTML = "Role";
+      //     data.players[roleChoose.id].role = "";
+      //     data.selected = false;
+      //   }
+    }
   }
+
   check.addEventListener("click", function () {
     if (data.checked === false) {
       data.checked = true;

@@ -51,7 +51,7 @@ nav {
 }
 
 #menu_btn:focus {
-  outline: 2px solid blue;
+  outline: 2px solid lightblue;
   border-radius: 5px;
 }
 
